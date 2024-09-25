@@ -34,9 +34,9 @@ const Nav = () => {
           className="sm:hidden"
         />
       </NavbarContent>
-      <Card justify="center">
+      <Card className="hidden sm:flex" justify="center">
         <CardBody>
-          <NavbarContent className="hidden sm:flex gap-4">
+          <NavbarContent className=" gap-4">
             {menuItems.map((item, index) => (
               <NavbarItem key={`${item}-${index}`}>
                 <Link>{item}</Link>
