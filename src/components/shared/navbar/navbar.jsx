@@ -10,21 +10,64 @@ import {
 } from "@nextui-org/react";
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Home",
-    "Team",
-    "Bytecoin",
-    "ICPC",
-    "IUPC",
-    "BPL",
-    "Top COders",
-    "Contest",
-    "Leaderboard",
-    "CF Standing",
+    {
+      href: "/",
+      label: "Home",
+    },
+    {
+      href: "/team",
+      label: "Team",
+    },
+    {
+      href: "/bytecoin",
+      label: "Bytecoin",
+    },
+    {
+      href: "/icpc",
+      label: "ICPC",
+    },
+    {
+      href: "/iupc",
+      label: "IUPC",
+    },
+    {
+      href: "/bpl",
+      label: "BPL",
+    },
+    {
+      href: "/topcoders",
+      label: "Top COders",
+    },
+    {
+      href: "/contest",
+      label: "Contest",
+    },
+    {
+      href: "/leaderboard",
+      label: "Leaderboard",
+    },
+    {
+      href: "/cfstanding",
+      label: "CF Standing",
+    },
+
+    {
+      href: "/about",
+      label: "About",
+    },
+    {
+      href: "/join",
+      label: "Join",
+    },
+    {
+      href: "/features",
+      label: "Features",
+    },
   ];
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
@@ -34,12 +77,18 @@ const Nav = () => {
           className="sm:hidden"
         />
       </NavbarContent>
-      <Card className="hidden sm:flex" justify="center">
+
+      <Card className="hidden sm:flex ">
         <CardBody>
-          <NavbarContent className=" gap-4">
+          <NavbarContent justify="center" className="gap-4">
             {menuItems.map((item, index) => (
-              <NavbarItem key={`${item}-${index}`}>
-                <Link>{item}</Link>
+              <NavbarItem key={index}>
+                <NavLink
+                  to={item.href}
+                  className={({ isActive }) => (isActive ? "show active" : "")}
+                >
+                  {item.label}
+                </NavLink>
               </NavbarItem>
             ))}
           </NavbarContent>
@@ -48,8 +97,13 @@ const Nav = () => {
 
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link>{item}</Link>
+          <NavbarMenuItem key={index}>
+            <NavLink
+              to={item.href}
+              className={({ isActive }) => (isActive ? "show active" : "")}
+            >
+              {item.label}
+            </NavLink>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

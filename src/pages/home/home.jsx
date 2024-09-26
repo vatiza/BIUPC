@@ -1,34 +1,35 @@
 import { Button } from "@nextui-org/button";
 import { Image, Link } from "@nextui-org/react";
 import codeImg from "../../assets/img/image.png";
-import TheTeams from "../../components/shared/theTeam/theTeam";
+import TeamPage from "../team/team";
 
 const HomePage = () => {
   return (
     <div>
       <div className="text-center">
-        <h1 className="font-kanit text-2xl lg:text-6xl lg:px-10 font-bold">
+        <h1 className="font-kanit text-2xl lg:text-6xl lg:mx-10 font-bold">
           Elevate Your Competitive Programming Journey
         </h1>
-        <p className="lg:text-2xl my-5 px-10">
+        <p className="lg:text-2xl my-5 mx-10">
           By Competitive Programmers, For Competitive Programmers
         </p>
         <Button size="lg" href="#" as={Link} color="primary">
           Joint Discord
         </Button>
         <p className="text-sm">11000+ Members</p>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-5">
           <Image
             src={codeImg}
             alt="Contest Image"
             loading="lazy"
             shadow="lg"
             width={300}
+            className="hover:scale-110 transition duration-300 ease-in-out"
           />
         </div>
 
         <h1 className="my-6 font-bold text-3xl">What is BCS?</h1>
-        <div className="px-10 lg:mx-36 text-start">
+        <div className="mx-10 lg:mx-36 text-start">
           <p>
             BCS - Bangladesh Competitive Programming Society is the largest
             Competitive Programming Discord Community Server in Bangladesh with
@@ -50,13 +51,7 @@ const HomePage = () => {
         {/* TODO:Features is loading */}
         <h1 className="text-5xl text-violet-500 ">Todo:Features is COming..</h1>
 
-        <h1 className="mt-6 mb-2 font-bold text-3xl">The Team</h1>
-        <p className="px-10 lg:mx-36 ">
-          The people who make this system work. Everyone is a volunteer and
-          works for the community just because they love it. If you want to join
-          the team, contact us on our Facebook page.
-        </p>
-        <TheTeams />    
+        <TeamPage />
       </div>
     </div>
   );
