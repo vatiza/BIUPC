@@ -1,4 +1,7 @@
 import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
+import Junior from "../../components/division/junior";
+import Senior from "../../components/division/senior";
+import Participation from "../../components/participation/participation";
 const BiupcPage = () => {
   return (
     <div>
@@ -11,21 +14,24 @@ const BiupcPage = () => {
         </p>
       </div>
 
-      <div className="flex w-full h-screen flex-col  items-center mt-5">
+      <div className="flex w-full  flex-col  items-center mt-5">
         <Tabs aria-label="Options">
           <Tab key="history" title="History">
             <Card>
-              <CardBody>
-                <h1>History is coming..</h1>
-              </CardBody>
+              <div className="flex w-full  flex-col  items-center mt-5">
+                <Tabs aria-label="Options">
+                  <Tab key="junior" title="Junior">
+                    <Junior />
+                  </Tab>
+                  <Tab key="senior" title="Senior">
+                    <Senior />
+                  </Tab>
+                </Tabs>
+              </div>
             </Card>
           </Tab>
           <Tab key="participation" title="Participation">
-            <Card>
-              <CardBody>
-                <h1>participation user coming</h1>
-              </CardBody>
-            </Card>
+            <Participation />
           </Tab>
           <Tab key="leaderboard" title="Leaderboard">
             <Card>

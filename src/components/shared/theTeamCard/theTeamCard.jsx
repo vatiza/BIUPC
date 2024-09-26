@@ -7,7 +7,7 @@ const TheTeamCard = ({ team }) => {
   const { name } = team;
   return (
     <>
-      <Card className="max-w-[340px] m-5">
+      <Card className="max-w-[340px] m-5 border border-transparent hover:border-white transition-all duration-10000 ease-in-out ">
         <CardBody>
           <div className="text-center ">
             <div className="text-center flex justify-center">
