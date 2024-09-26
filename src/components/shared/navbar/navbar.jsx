@@ -28,12 +28,12 @@ const Nav = () => {
       label: "Bytecoin",
     },
     {
-      href: "/icpc",
-      label: "ICPC",
+      href: "/biupc",
+      label: "BIUPC",
     },
     {
-      href: "/iupc",
-      label: "IUPC",
+      href: "/icpc",
+      label: "ICPC",
     },
     {
       href: "/bpl",
@@ -60,10 +60,7 @@ const Nav = () => {
       href: "/about",
       label: "About",
     },
-    {
-      href: "/join",
-      label: "Join",
-    },
+
     {
       href: "/features",
       label: "Features",
