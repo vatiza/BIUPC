@@ -24,6 +24,7 @@ const PartiTable = () => {
   return (
     <div className="flex flex-col gap-3 mt-5">
       <Table
+        onValueChange={setSelectedColor}
         color={selectedColor}
         selectionMode="single"
         defaultSelectedKeys={["2"]}

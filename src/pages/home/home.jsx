@@ -13,7 +13,7 @@ const HomePage = () => {
         <p className="lg:text-2xl my-5 mx-10">
           By Competitive Programmers, For Competitive Programmers
         </p>
-        <Button size="lg" href="#" as={Link} color="primary">
+        <Button variant="shadow" size="lg" href="#" as={Link} color="primary">
           Joint Discord
         </Button>
         <p className="text-sm">11000+ Members</p>

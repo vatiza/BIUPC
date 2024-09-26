@@ -1,12 +1,12 @@
 import {
+  Card,
+  CardBody,
   Navbar,
   NavbarContent,
   NavbarItem,
-  NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Card,
-  CardBody,
+  NavbarMenuToggle,
 } from "@nextui-org/react";
 
 import React from "react";
