@@ -21,12 +21,9 @@ const Nav = () => {
     },
     {
       href: "/team",
-      label: "Team",
+      label: "Teams",
     },
-    {
-      href: "/bytecoin",
-      label: "Bytecoin",
-    },
+
     {
       href: "/biupc",
       label: "BIUPC",
@@ -34,18 +31,6 @@ const Nav = () => {
     {
       href: "/icpc",
       label: "ICPC",
-    },
-    {
-      href: "/bpl",
-      label: "BPL",
-    },
-    {
-      href: "/topcoders",
-      label: "Top COders",
-    },
-    {
-      href: "/contest",
-      label: "Contest",
     },
     {
       href: "/leaderboard",
@@ -57,13 +42,8 @@ const Nav = () => {
     },
 
     {
-      href: "/about",
-      label: "About",
-    },
-
-    {
-      href: "/features",
-      label: "Features",
+      href: "/alumni",
+      label: "Alumni",
     },
   ];
   return (
@@ -74,7 +54,6 @@ const Nav = () => {
           className="sm:hidden"
         />
       </NavbarContent>
-
       <Card className="hidden sm:flex ">
         <CardBody>
           <NavbarContent justify="center" className="gap-4">

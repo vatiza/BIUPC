@@ -1,5 +1,4 @@
 import {
-  Button,
   Spinner,
   Table,
   TableBody,
@@ -8,14 +7,11 @@ import {
   TableHeader,
   TableRow,
 } from "@nextui-org/react";
-
 import React from "react";
 import GetSingleTeam from "../../../utils/getSingleTeam";
-import { Link } from "react-router-dom";
-
-const PartiTable = () => {
+const LeaderBoardTable = () => {
   const [teams, loading] = GetSingleTeam();
-
+  const problemNumbers = ["A", "B", "C", "D", "E", "F"];
   const [selectedColor, setSelectedColor] = React.useState("default");
   if (loading)
     return (
@@ -34,23 +30,24 @@ const PartiTable = () => {
       >
         <TableHeader>
           <TableColumn>#</TableColumn>
-          <TableColumn>Contest Name</TableColumn>
-          <TableColumn>Date</TableColumn>
-          <TableColumn>Participant</TableColumn>
-          <TableColumn>Actions</TableColumn>
+          <TableColumn>Name</TableColumn>
+          <TableColumn>Solved</TableColumn>
+          {problemNumbers.map((p, index) => (
+            <TableColumn key={index}>{p}</TableColumn>
+          ))}
         </TableHeader>
         <TableBody>
           {teams.map((team, index) => (
             <TableRow key={index}>
               <TableCell>{index + 1}</TableCell>
               <TableCell>{team.name}</TableCell>
-              <TableCell>12 oct 2024</TableCell>
-              <TableCell>{index + 1}</TableCell>
-              <TableCell>
-                <Button>
-                  <Link to="/showleaderboard">View</Link>
-                </Button>
-              </TableCell>
+              <TableCell>{index + 3}</TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -59,4 +56,4 @@ const PartiTable = () => {
   );
 };
 
-export default PartiTable;
+export default LeaderBoardTable;

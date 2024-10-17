@@ -1,7 +1,7 @@
-import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
+import { Card, CardBody, Tab, Tabs } from "@nextui-org/react";
 import Junior from "../../components/division/junior";
 import Senior from "../../components/division/senior";
-import Participation from "../../components/participation/participation";
+import Leadboard from "../../components/leaderboard/leadboard";
 const BiupcPage = () => {
   return (
     <div>
@@ -30,12 +30,12 @@ const BiupcPage = () => {
               </div>
             </Card>
           </Tab>
-          <Tab key="participation" title="Participation">
-            <Participation />
-          </Tab>
+
           <Tab key="leaderboard" title="Leaderboard">
             <Card>
-              <CardBody>leaderborad is comming</CardBody>
+              <CardBody>
+                <Leadboard />
+              </CardBody>
             </Card>
           </Tab>
         </Tabs>

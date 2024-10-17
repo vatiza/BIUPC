@@ -7,6 +7,7 @@ import NotFoundPage from "../pages/error/404page";
 import HomePage from "../pages/home/home";
 import TeamPage from "../pages/team/team";
 import IcPcPage from "../pages/icpc/icpc";
+import ShowLeaderBoard from "../pages/show_leaderboard/showLeaderboard";
 
 const routes = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const routes = createBrowserRouter([
       {
         path: "/icpc",
         element: <IcPcPage />,
+      },
+      {
+        path: "showleaderboard",
+        element: <ShowLeaderBoard />,
       },
 
       // error 404 route
