@@ -30,15 +30,20 @@ const TheTeamCard = ({ team }) => {
 
             <p className="mt-2 text-s text-start">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
-              expedita quibusdam sint, similique porro est minima cum
-              consequatur optio numquam?
+              expedita
             </p>
             <div className="flex mt-4 gap-3 justify-center ">
               <a href="">
-                <FaFacebookSquare size={30} />
+                <FaFacebookSquare
+                  className="text-blue-600 hover:text-blue-800"
+                  size={25}
+                />
               </a>
               <a href="">
-                <FaSquareGithub size={30} />
+                <FaSquareGithub
+                  className="text-blue-600 hover:text-blue-800"
+                  size={25}
+                />
               </a>
             </div>
           </div>

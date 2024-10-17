@@ -19,12 +19,12 @@ const TeamPage = () => {
           teams.map((team, index) => <TheTeamCard key={index} team={team} />)
         )}
       </div> */}
-      <div className="grid grid-flow-row lg:grid-cols-1">
+      <div className="grid grid-flow-row lg:grid-cols-1 ">
         {loading ? (
           <Spinner></Spinner>
         ) : (
           icpcTeams.map((team, index) => (
-            <Card className="mt-5" key={index}>
+            <Card className="mt-5 border" key={index}>
               <CardBody>
                 <div className="text-center">
                   {" "}
